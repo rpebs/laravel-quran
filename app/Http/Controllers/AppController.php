@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Surat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\Http;
 
 class AppController extends Controller
@@ -12,13 +14,25 @@ class AppController extends Controller
         $data['title'] = 'Home';
 
         try{
-            $response = Http::get('https://equran.id/api/surat');
-            $data['surah'] = $response->json();
+            $response = Surat::listSurat();
+            $data['surah'] = $response;
 
         }catch(\Exception $e){
             return $e->getMessage();
         }
         return view('home', compact('data'));
 
+    }
+
+    public function baca($nomor)
+    {
+        try{
+            $response = Surat::detailSurat($nomor);
+            $data['surah'] = $response;
+
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
+        return view('baca', compact('data'));
     }
 }
