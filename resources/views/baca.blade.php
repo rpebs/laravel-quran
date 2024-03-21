@@ -4,6 +4,7 @@
 @section('content')
 
 <h1 class="text-center">{{$data['surah']['nama_latin']}}</h1>
+<h3 class="text-center">({{$data['surah']['arti']}})</h3>
 
 <div class="container">
     @foreach ($data['surah']['ayat'] as $a )
