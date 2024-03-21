@@ -1,0 +1,5 @@
+@yield('customcss')
+@include('layout.header')
+@yield('content')
+@include('layout.footer')
+@yield('customjs')
