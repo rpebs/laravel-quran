@@ -30,6 +30,7 @@ class AppController extends Controller
     {
         try {
             $response = Surat::detailSurat($nomor);
+            $data['title'] = $response['nama_latin'];
             $data['surah'] = $response;
         } catch (\Exception $e) {
             return $e->getMessage();
