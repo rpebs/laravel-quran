@@ -12,20 +12,22 @@
 </style>
 @endsection
 @section('content')
-<h1 class="text-center mt-3">Daftar Surat</h1>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 mx-auto d-flex justify-content-center mb-3">
-            <input type="text" class="form-control" id="searchInput" placeholder="Cari Surah">
-        </div>
-    </div>
-    <div class="row" id="surahContainer">
-        <div class="text-center" id="loadingIndicator" style="display: none;">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+<div class="p-3" style="background-color: #dfe6e9; min-height:100%">
+    <h1 class="text-center">Daftar Surat</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto d-flex justify-content-center mb-3">
+                <input type="text" class="form-control" id="searchInput" placeholder="Cari Surah">
             </div>
         </div>
-        <!-- Konten Surah akan diperbarui oleh Ajax -->
+        <div class="row" id="surahContainer">
+            <div class="text-center" id="loadingIndicator" style="display: none;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!-- Konten Surah akan diperbarui oleh Ajax -->
+        </div>
     </div>
 </div>
 @endsection
@@ -46,7 +48,7 @@
                     var surahHtml = `
                         <div class="col-md-4">
                             <a class="text-decoration-none text-black" href="/baca/surat/${s.nomor}">
-                                <div class="d-flex justify-content-between border border-1 rounded mb-3 p-2 list">
+                                <div class="d-flex justify-content-between border bg-light border-1 rounded mb-3 py-2 px-3 list">
                                     <p class="align-self-lg-start w-number">
                                         ${s.nomor}
                                     </p>
