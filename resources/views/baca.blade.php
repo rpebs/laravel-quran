@@ -11,10 +11,10 @@
     <div class="container border-top mb-4" id="1">
         <div class="row mt-4">
             <div class="col">
-                <div class="text-end">{{$a['nomor']}}</div>
+                <div class="text-start">{{$a['nomor']}}.</div>
                 <div class="text-end">{{$a['ar']}}</br></div>
                 <div class="text-end">{{$a['tr']}}</br></div>
-                <div class="text-end">{{$a['idn']}}</div>
+                <div class="text-end text-secondary">{{$a['idn']}}</div>
             </div>
             <!-- <div class="col">
 

@@ -13,24 +13,25 @@ class AppController extends Controller
     {
         $data['title'] = 'Home';
 
-        try{
-            $response = Surat::listSurat();
-            $data['surah'] = $response;
+        return view('home', compact('data'));
+    }
 
-        }catch(\Exception $e){
+    public function getSurah()
+    {
+        try {
+            $response = Surat::listSurat();
+            return response()->json($response);
+        } catch (\Exception $e) {
             return $e->getMessage();
         }
-        return view('home', compact('data'));
-
     }
 
     public function baca($nomor)
     {
-        try{
+        try {
             $response = Surat::detailSurat($nomor);
             $data['surah'] = $response;
-
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             return $e->getMessage();
         }
         return view('baca', compact('data'));
