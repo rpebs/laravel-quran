@@ -5,6 +5,10 @@
     },
     "routes": [
         {
+            "src": "/build(.)",
+            "dest": "/public/assets/"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
@@ -13,7 +17,7 @@
         "APP_NAME": "Quran Laravel",
         "APP_ENV": "development",
         "APP_DEBUG": "true",
-        "APP_URL": "https://dhanyrpebs-quran-laravel.vercel.app",
+        "APP_URL": "https://laravel-quran.vercel.app",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
