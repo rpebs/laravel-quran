@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}"> -->
     <!-- <script src="{{asset('assets/js/bootstrap.min.js')}}"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
 </head>
 
 <body>
