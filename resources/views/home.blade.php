@@ -33,6 +33,7 @@
 @endsection
 @section('customjs')
 <script>
+
     // Fungsi untuk melakukan panggilan Ajax dan memperbarui konten
     function loadSurahData() {
         $('#loadingIndicator').show();
